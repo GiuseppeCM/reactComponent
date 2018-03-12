@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Map component test</title>
+    
+    <!-- MAPBOX -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v3.0.11/turf.min.js'></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.0/mapbox-gl-draw.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.0/mapbox-gl-draw.css' type='text/css'/>
+
+
+
+    <link href="/css/slidemenu.css" rel="stylesheet" type="text/css">
+
+    <script src="/scripts/lib/react.development.js"></script>
+    <script src="/scripts/lib/react-dom.development.js"></script>
+    <script src="/scripts/lib/prop-types.min.js"></script>
+    <script src="/scripts/lib/jquery-3.3.1.min.js"></script>    
+    <script src="/scripts/lib/lodash.js"></script>
+    
+    <script src="/scripts/components/slidemenu/menu.js"></script>
+    <script src="/scripts/components/slidemenu/slidemenu.js"></script>
+    <script src="/scripts/components/container/geomapcontainer.js"></script>
+    <script src="/scripts/components/map/map.js"></script>    
+    <script src="/scripts/proxy/MenuProxy.js"></script>
+    <script src="/scripts/proxy/RemoteDataProxy.js"></script>
+    
+
+
+    <style>
+        #map {
+            height: 100%;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='app'></div>
+
+    <script type='text/javascript'>
+
+        var containerSlideMenu = document.getElementById('app');
+        const geoMapContainer = React.createElement(GeoMapContainer,{ host :  'http://10.100.201.168:5000/geodata/', url : 'menu' });          
+        ReactDOM.render(geoMapContainer, containerSlideMenu);
+
+    </script>
+</body>
+
+</html>
