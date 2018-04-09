@@ -57,7 +57,7 @@ class GeoMapContainer extends React.Component {
             this.setMenus(menus);
         }
 
-        if(menu.selected == true && this.state.polygonMapInfo.drawed == true)
+        if(menu.selected == true)
             setTimeout(this.loadRemoteData(menu),300);
         else if(menu.selected == false){
             var index =  _.findIndex(this.state.layers ,l => l.id == menu.id);
