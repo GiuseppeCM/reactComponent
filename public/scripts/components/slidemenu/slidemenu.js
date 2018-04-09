@@ -74,8 +74,8 @@ class SlideMenu extends React.Component {
 
     /** Handling react event and draw all menu component */
     render() {
-        console.log(this.state.isMobile)
         const reactMenu = this.props.menus.map((jsonMenu) => {
+            
             return React.createElement(Menu, {
                 key: jsonMenu.id,
                 id: jsonMenu.id,
@@ -84,7 +84,9 @@ class SlideMenu extends React.Component {
                 url: jsonMenu.url,
                 iconUrl: jsonMenu.iconUrl,
                 selected: jsonMenu.selected,
-                menuClicked: this.menuClicked
+                menuClicked: this.menuClicked,
+		type: jsonMenu.type,
+		geojsonUrl: jsonMenu.geojsonUrl
             });
 
         });

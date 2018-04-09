@@ -27,9 +27,6 @@
     <script src="/scripts/components/map/map.js"></script>    
     <script src="/scripts/proxy/MenuProxy.js"></script>
     <script src="/scripts/proxy/RemoteDataProxy.js"></script>
-    
-
-
     <style>
         #map {
             height: 100%;
@@ -50,7 +47,7 @@
     <script type='text/javascript'>
 
         var containerSlideMenu = document.getElementById('app');
-        const geoMapContainer = React.createElement(GeoMapContainer,{ host :  'http://localhost:5000/geodata/', url : 'menu' });          
+        const geoMapContainer = React.createElement(GeoMapContainer, { host : 'http://localhost:5000/geodata/', url : 'menu' });          
         ReactDOM.render(geoMapContainer, containerSlideMenu);
 
     </script>

@@ -4,6 +4,7 @@ class RemoteDataProxy {
     }
 
     getRemoteData(url, success, error){
+	console.log(url)
         $.ajax({url: url, 
             success: function(result, xhr, status){
                 success(result);
