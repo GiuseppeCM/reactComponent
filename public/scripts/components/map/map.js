@@ -15,7 +15,8 @@ class MyMap extends React.Component {
         mapboxgl.accessToken = 'pk.eyJ1IjoiZ2l1c2VwcGVtb250ZSIsImEiOiJjamRhMTJzcmI1M3YzMzNzNm11ZzJ5ZGphIn0.49tvN6m7Jp8Jr7go81VRGw';
         var map = new mapboxgl.Map({
             container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v9',
+            //style: 'mapbox://styles/mapbox/streets-v9',
+            style: 'mapbox://styles/mapbox/light-v9',   
             zoom: 11,
             center: {
                 lat: 41.89,

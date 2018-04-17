@@ -93,10 +93,16 @@ class GeoMapContainer extends React.Component {
     /** Load remote json data using proxy dedicated */
     loadRemoteData(menu, success){
         var self = this;
+
+        var options = {
+            polygon : this.state.polygonMapInfo,
+            url : menu.url
+        }
+
         //create remote data proxy
         const remoteProxy = new RemoteDataProxy();
         //request remote data json
-        remoteProxy.getRemoteData(menu.url, function(data){
+        remoteProxy.getRemoteData(options, function(data){
             var layer =  _.remove(self.state.layers ,l => l.id == menu.id);
             if(layer.length > 0){
                 layer = layer[0]; 
